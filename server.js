@@ -53,16 +53,44 @@
 //     console.log('Client disconnected');
 //   });
 // });
+// last const WebSocket = require('ws');
+// const http = require('http');
+
+// // Use Render’s assigned port (or 8080 as fallback locally)
+// const PORT = process.env.PORT || 8080;
+
+// // Create HTTP server (required by WebSocket in Render)
+// const server = http.createServer();
+
+// // Create WebSocket server bound to that HTTP server
+// const wss = new WebSocket.Server({ server });
+
+// let content = "";
+
+// wss.on('connection', function connection(ws) {
+//   ws.send(JSON.stringify({ type: 'update', content }));
+
+//   ws.on('message', function incoming(message) {
+//     const msg = JSON.parse(message);
+//     if (msg.type === 'update') {
+//       content = msg.content;
+//       wss.clients.forEach(function each(client) {
+//         if (client !== ws && client.readyState === WebSocket.OPEN) {
+//           client.send(JSON.stringify({ type: 'update', content }));
+//         }
+//       });
+//     }
+//   });
+// });
+
+// server.listen(PORT, () => {
+//   console.log(`WebSocket server running on ws://localhost:${PORT}`);
+// });
 const WebSocket = require('ws');
 const http = require('http');
 
-// Use Render’s assigned port (or 8080 as fallback locally)
 const PORT = process.env.PORT || 8080;
-
-// Create HTTP server (required by WebSocket in Render)
 const server = http.createServer();
-
-// Create WebSocket server bound to that HTTP server
 const wss = new WebSocket.Server({ server });
 
 let content = "";
@@ -84,5 +112,5 @@ wss.on('connection', function connection(ws) {
 });
 
 server.listen(PORT, () => {
-  console.log(`WebSocket server running on ws://localhost:${PORT}`);
+  console.log(`✅ WebSocket server running on port ${PORT}`);
 });
