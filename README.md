@@ -24,5 +24,4 @@ realtime-editor/
 
 │   ├── server.js  # WebSocket server
 │   └── package.json
-# Screenshot of Output
-![Screenshot 2025-07-06 173742](https://github.com/user-attachments/assets/59f07a9d-5295-4969-bfcc-a22b4d0a9c1f)
+
