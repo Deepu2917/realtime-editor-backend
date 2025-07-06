@@ -89,7 +89,7 @@
 const WebSocket = require('ws');
 const http = require('http');
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT; // ✅ STRICTLY use only this
 const server = http.createServer();
 const wss = new WebSocket.Server({ server });
 
@@ -114,4 +114,3 @@ wss.on('connection', function connection(ws) {
 server.listen(PORT, '0.0.0.0', () => {
   console.log(`✅ WebSocket server running on ws://0.0.0.0:${PORT}`);
 });
-
