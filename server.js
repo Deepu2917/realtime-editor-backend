@@ -124,8 +124,15 @@
 const WebSocket = require('ws');
 const http = require('http');
 
-const PORT = process.env.PORT;
-const server = http.createServer();
+const PORT = process.env.PORT || 8080;
+
+// ✅ Create HTTP server with response to show it’s running
+const server = http.createServer((req, res) => {
+  res.writeHead(200);
+  res.end('WebSocket server is live ✅');
+});
+
+// ✅ Attach WebSocket server to HTTP server
 const wss = new WebSocket.Server({ server });
 
 let content = "";
