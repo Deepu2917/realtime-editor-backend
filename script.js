@@ -3,7 +3,7 @@
 // const socket = new WebSocket("wss://your-server-name.onrender.com");
 //const socket = new WebSocket('wss://realtime-editor-backend.onrender.com');
 //const socket = new WebSocket('wss://realtime-editor-backend.onrender.com/');
-const socket = new WebSocket('wss://realtime-editor-backend-055w.onrender.com');
+const socket = new WebSocket('ws://realtime-editor-backend-055w.onrender.com');
 
 let editor = CodeMirror(document.getElementById('editor'), {
   lineNumbers: true,
