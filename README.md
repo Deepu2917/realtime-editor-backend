@@ -1,3 +1,10 @@
+COMPANY-CODTECH IT SOLUTIONS 
+NAME-DEEPU KUMARI
+INTERN ID-CT06DF1731
+DOMAIN-SOFTWARE DEVELOPMENT
+DURATION-6 WEEKS 
+MENTOR-NEELA SANTOSH
+
 # 🧑‍💻 Real-Time Collaborative tool
 
 This is a real-time collaborative code editor built with **HTML, CSS, JavaScript**, and **WebSocket (Node.js backend)**. It allows multiple users to write and edit code simultaneously — just like Google Docs, but for code!
